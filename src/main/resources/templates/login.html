@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .text-primary {
+      color: #007bff !important;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow p-4 w-50">
+    <h2 class="text-center text-primary mb-4">Đăng Nhập</h2>
+    <!-- Form Đăng Nhập -->
+    <form action="/auth/login" method="post">
+      <!-- CSRF Token -->
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+      <!-- Tên Đăng Nhập -->
+      <div class="form-group">
+        <label for="username" class="text-secondary">Tên Đăng Nhập</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Nhập tên đăng nhập" required>
+      </div>
+      <!-- Mật Khẩu -->
+      <div class="form-group">
+        <label for="password" class="text-secondary">Mật Khẩu</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Nhập mật khẩu" required>
+      </div>
+      <!-- Nút Đăng Nhập -->
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary btn-block">Đăng Nhập</button>
+      </div>
+      <!-- Liên Kết Đăng Ký -->
+      <div class="text-center">
+        <p class="text-muted">Chưa có tài khoản? <a href="/auth/register" class="text-primary">Đăng Ký</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
