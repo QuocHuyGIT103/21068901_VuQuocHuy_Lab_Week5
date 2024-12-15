@@ -100,3 +100,6 @@ Khi nhập ID ứng viên và ấn nút “Gợi ý kỹ năng”, hệ thống 
 ### 19. Giao diện thêm công việc, khi thêm xong sẽ quay lại trang danh sách công việc.
 #### Hình ảnh minh họa:
 ![Create Job](Images/them-congviec.png)
+### 20. Giao diện liên hệ
+#### Hình ảnh minh họa:
+![Create Job](Images/contact.png)
